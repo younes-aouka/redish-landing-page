@@ -1,0 +1,99 @@
+.whyRedish .stats {
+    padding: 20px 20px ;
+    position: relative;
+    background-color: white;
+}
+.whyRedish .stats::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    height: 30px;
+    z-index: 10;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+.whyRedish .stats h2 {
+    color: black;
+    position: relative;
+}
+.whyRedish .stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.whyRedish .stats .box {
+    padding: 30px 15px;
+    text-align: center;
+    position: relative;
+    opacity: 0.8;
+    transition: var(--main-transition);
+}
+
+.whyRedish .stats .box .top,
+.whyRedish .stats .box .bottom {
+    position: absolute;
+    width: 0px;
+    background-color: var(--main-color-1);
+    transition: 1s;
+    height: 2px;
+}
+
+.whyRedish .stats .box .top {
+    top: 0;
+    left: 0;
+}
+
+.whyRedish .stats .box .bottom {
+    bottom: 0;
+    right: 0;
+}
+
+.whyRedish .stats .box:hover .top,
+.whyRedish .stats .box:hover .bottom {
+    width: 100%;
+}
+
+.whyRedish .stats .box::before,
+.whyRedish .stats .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: var(--main-color-1);
+    transition: 1s;
+    height: 0;
+}
+.whyRedish .stats .box::before {
+    top: 0;
+    right: 0;
+}
+.whyRedish .stats .box::after {
+    left: 0;
+    bottom: 0;
+}
+.whyRedish .stats .box:hover {
+    opacity: 1;
+}
+.whyRedish .stats .box:hover::before,
+.whyRedish .stats .box:hover::after {
+    height: 100%;
+}
+
+.whyRedish .stats .box svg {
+    width: 40px;
+    height: 32px;
+}
+
+.whyRedish .stats .box .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.whyRedish .stats .box .text {
+    color: var(--main-color-1);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}

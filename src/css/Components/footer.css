@@ -1,0 +1,31 @@
+footer {
+    margin-top: 20px ;
+    padding: 15px 0;
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .logo {
+    color: white;
+    padding: 0;
+}
+
+footer article p:last-of-type{
+    margin-bottom: 20px;
+}
+
+footer article .social {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+footer > p {
+    margin: 0;
+}

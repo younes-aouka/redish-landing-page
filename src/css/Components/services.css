@@ -1,0 +1,72 @@
+.whyRedish .services {
+    padding: 40px ;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/* Inner wrapper that moves */
+.whyRedish .services .slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content; /* Prevent shrinking */
+    animation: scroll 28s linear infinite;
+}
+
+/* Individual items */
+.whyRedish .services .slider-track .slider-item {
+    text-align: center;
+    width: 238px;
+    background-color: white;
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.whyRedish .services .slider-track .slider-item svg {
+    margin: 30px auto 20px;
+    display: block;
+    color: #d5d5d5;
+    width: 56px;
+    height: 56px;
+}
+.whyRedish .services .slider-track .slider-item  > h3 {
+    margin-bottom:40px;
+    font-size: 25px;
+    color: var(--main-color-3)
+}
+.whyRedish .services .slider-track .slider-item  .bottom {
+    padding: 15px;
+    position: relative;
+    background-color: #f9f9f9;
+}
+
+.whyRedish .services .slider-track .slider-item .bottom .part1 {
+    position: absolute;
+    background-color: var(--main-color-1);
+    color: white;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+}
+.whyRedish .services .slider-track .slider-item .bottom .part2 {
+    position: absolute;
+    background-color: #d5d5d5;
+    top: 0;
+    left: 59px;
+    width: 37px;
+    height: 100%;
+    transform: skewX(-30deg);
+}
+/* Infinite scrolling animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

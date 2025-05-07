@@ -1,0 +1,88 @@
+/*  logo */
+.logo {
+    font-weight: 600;
+    padding: 10px 0;
+    color: black;
+    font-size: 34px;
+}
+.logo span {
+    color: red;
+}
+
+/* container */
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+  /* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 960px) {
+    .container {
+        width: 940px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+
+/* arrow up button */
+.arrowUp {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    z-index: 101;
+    padding: 5px;
+    border: 1.5px solid black;
+    background-color: transparent;
+    border-radius: 3px;
+    transition: var(--main-transition);
+}
+.arrowUp.show {
+    display: block;
+}
+.arrowUp:hover {
+    border-color: var(--main-color-1);
+}
+.arrowUp:hover svg {
+    stroke: red;
+}
+
+/* sections titles */
+.sectionsTitle {
+    text-align: center;
+    font-size: 33px;
+    margin: 0 0 50px;
+}
+.sectionsTitle span {
+    position: relative;
+    color: var(--main-color-1);
+}
+/* why redish menu icons style */
+.whyRedishMenu li:nth-child(1) svg {
+    stroke: red;
+}
+.whyRedishMenu li:nth-child(2) svg {
+    stroke: blue;
+
+}
+.whyRedishMenu li:nth-child(3) svg {
+    stroke: green;
+
+}
+.whyRedishMenu li:nth-child(4) svg {
+    stroke: black;
+
+}
+.whyRedishMenu li:nth-child(5) svg {
+    stroke: black;
+
+}

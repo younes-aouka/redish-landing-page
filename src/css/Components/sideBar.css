@@ -1,0 +1,106 @@
+.sideBar {
+    background-color: var(--section-background-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 200;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    transform: translateX(-300px);
+    transition: all var(--main-transition);
+}
+
+@media (min-width:768px) {
+    .sideBar {
+        display: none;
+    }
+}
+
+.sideBar.show {
+    transform: translateX(0);
+}
+
+.sideBar .logo {
+    text-align: center;
+    margin: 40px 0;
+}
+.sideBar >hr {
+    width: 80%;
+}
+.sideBar a {
+    color: black;
+}
+
+.sideBar a:active {
+    color: red;
+}
+
+.sideBar .navList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.sideBar .navList li {
+
+}
+.sideBar .navList li a:active{
+    text-decoration: underline;
+}
+
+.sideBar .navList li:nth-child(2) {
+
+}
+.sideBar .navList li:nth-child(2) > button{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.sideBar .navList li:nth-child(2) > button svg.rotate {
+    transform: rotate(180deg);
+}
+
+.sideBar .navList li:nth-child(2) .whyRedishMenu{
+    opacity: 0;
+    visibility: hidden;
+    flex-direction: column;
+    gap: 10px;
+    height: 0;
+    transition: all var(--main-transition);
+}
+
+.sideBar .navList li:nth-child(2) .whyRedishMenu.show {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid;
+    border-color: black transparent;
+}
+
+.sideBar .navList li:nth-child(2) .whyRedishMenu .item{
+    
+}
+.sideBar .navList li:nth-child(2) .whyRedishMenu .item a{
+    display: flex;
+    align-items: center;
+}
+
+.sideBar .navList li:nth-child(2) .whyRedishMenu .item a svg{
+    width: 20px;
+    margin-right: 10px;
+}
+.sideBar .navList li:nth-child(2) .whyRedishMenu .item a span{
+    
+}
