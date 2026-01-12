@@ -1,0 +1,177 @@
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px solid #9E9E9E;
+}
+
+header .container {
+    display: flex;
+    position: relative;
+    column-gap: 70px;
+}
+
+header .container .navList {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+}
+
+header .container .navList > li:nth-child(2){
+    position: relative;
+}
+
+header .container .navList li .navItem {
+    position: relative;
+    transition: var(--main-transition) all;
+    color: black;
+}
+
+header .container .navList li .navItem::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80%;
+    height: 1px;
+    width: 0%;
+    background-color: var(--nav-hovering-color);
+    transition: var(--main-transition);
+}
+
+header .container .navList li .navItem:hover::before {
+    width:50%;
+}
+
+header .container .navList li:nth-child(2) .navItem {
+    display: flex;
+    align-items: center;
+}
+
+header .container .navList li:nth-child(2) .navItem svg {
+    width: 19px;
+    margin-left: 5px;
+    transition: var(--main-transition);
+}
+
+header .container .navList li:nth-child(2) .navItem svg.rotate {
+    transform: rotate(180deg);
+}
+
+header .container .navList li:nth-child(2) .navItem:hover svg {
+    transform: rotate(180deg);
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 70%;
+    width: 140%;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 18px;
+    padding: 10px;
+    background-color: white;
+    border: solid black;
+    border-width: 0 0.5px 0.5px 0.5px;
+    border-radius: 5px;
+    transition: var(--main-transition);
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu.show {
+    top: 120%;
+    opacity: 1;
+    visibility: visible;
+}
+
+header .container .navList li:nth-child(2):hover .whyRedishMenu {
+    top: 120%;
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 635.99px) {
+    header .container .navList li:nth-child(2) .whyRedishMenu.show {
+        top: 102%;
+    }
+    header .container .navList li:nth-child(2):hover .whyRedishMenu {
+        top: 102%;
+    }
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu li {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu li:not(:last-child) {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu li a {
+    display: flex;
+    align-items: center;
+    transition: var(--main-transition);
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu li:hover a {
+    transform: translateX(5px);
+}
+
+header .container .navList li:nth-child(2) .whyRedishMenu li a svg {
+    width: 22px;
+    margin-right: 12px;
+}
+
+header .container .navList li .navItem:hover {
+    color: var(--nav-hovering-color);
+}
+
+header .container .navList li:nth-child(5) .lucide.lucide-moon{
+    display: none;
+}
+
+@media (min-width: 481px){
+    header .container .navList li .navItem {
+        padding: 10px;
+        font-size: 20px;
+    }
+    
+    header .container .navList li:nth-child(4) {
+        margin-right: 20px;
+    }
+}
+
+@media not (min-width:768px) {
+    header .container .navList > li:not(:last-child) {
+        display: none;
+    }
+}
+
+header .container .navList > li:last-child {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .container .navList > li:last-child .sideBarButton {
+    display: flex;
+}
+
+@media (min-width:768px) {
+    header .container .navList > li:last-child .sideBarButton {
+        display: none;
+    }
+}
+
+header .container .navList li .switchModeButton {
+    display: flex;
+}
+
+header .container .switchModeButton svg {
+
+}

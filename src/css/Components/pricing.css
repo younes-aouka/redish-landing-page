@@ -1,0 +1,99 @@
+.pricing {
+    padding-top: 50px;
+    padding-bottom: var(--main-padding-bottom);
+}
+
+.pricing > h2{
+    margin-bottom: 0;
+}
+
+.pricing > p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+.pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    border-radius: var(--main-border-raduis);
+}
+
+.pricing .container .box {
+    position: relative;
+    border: 1px solid #9E9E9E;
+    padding-bottom: 10px;
+}
+
+/* .pricing .container .box:nth-child(2) {
+    border: 2px solid var(--main-color-1);
+} */
+
+.pricing .container .box .label {
+    position: absolute;
+    writing-mode: vertical-rl;
+    background-color: var(--main-color-1);
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px 35px 10px;
+    font-size: 18px;
+    right: 20px;
+    width: 40px
+}
+
+.pricing .container .box .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-width: 20px;
+}
+
+.pricing .container .box > h3{
+    font-weight: bold;
+    margin: 23px 0;
+    font-size: 30px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.pricing .container .box .price {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.pricing .container .box .price .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.pricing .container .box .price .duration {
+    place-content: flex-end;
+}
+
+.pricing .container .box .benefits {
+
+}
+
+.pricing .container .box .benefits .row{
+    display: flex;
+    padding: 10px 5px;
+}
+
+.pricing .container .box .benefits .row svg{
+    width: 18px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    stroke: #43A047;
+    stroke-width: 4px;
+}
+
+.pricing .container .box .benefits .row p{
+    margin: 0;
+}

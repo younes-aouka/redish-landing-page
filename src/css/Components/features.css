@@ -1,0 +1,89 @@
+.whyRedish {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background-color);
+    overflow-x: hidden;
+}
+
+.whyRedish .features {
+    margin-bottom: 50px;
+}
+
+.whyRedish .features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: var(--main-transition2) ease-in;
+}
+
+.whyRedish .features .container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.whyRedish .features .container .feature {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--feature-background-color);
+    border-radius: var(--main-border-raduis);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    transition: var(--main-transition);
+}
+
+.whyRedish .features .container .feature:hover {
+    box-shadow: 0 2px 15px 0px rgb(0 0 0 / 24%);
+    transform: translateY(-5px);
+}
+
+.whyRedish .features .container .feature:nth-child(1) svg {
+    stroke: red;
+}
+.whyRedish .features .container .feature:nth-child(2) svg {
+
+}
+.whyRedish .features .container .feature:nth-child(3) svg {
+    stroke: #283593;
+}
+.whyRedish .features .container .feature:nth-child(4) svg {
+    stroke: green;
+}
+
+@media (max-width: 1199px) and (min-width:960px){
+    .whyRedish .features .container .feature:nth-child(4) {
+        grid-column: 2;
+    }
+}
+
+.whyRedish .features .container .feature h3{
+    font-weight: 800;
+    position: relative;
+}  
+
+/* .whyRedish .features .container .feature h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 4px;
+}
+.whyRedish .features .container .feature:nth-child(1) h3::after {
+    background-color: red;
+}
+.whyRedish .features .container .feature:nth-child(2) h3::after {
+    background-color: black;
+}
+.whyRedish .features .container .feature:nth-child(3) h3::after {
+    background-color: blue;
+}
+.whyRedish .features .container .feature:nth-child(4) h3::after {
+    background-color: green;
+} */
+
+.whyRedish .features .container .feature p {
+    line-height: 1.8;
+    color: var(--paragraph-font-color);
+}

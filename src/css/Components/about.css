@@ -1,0 +1,111 @@
+.about {
+
+}
+
+.about .sectionsTitle  {
+    margin-bottom: 0;
+}
+
+.about .wrapper {
+    padding: 0 30px;
+}
+
+.about .wrapper img{
+    display: block;
+    width: 200px ;
+    margin: 0 auto ;
+}
+
+@media (min-width:1024px){
+    .about .wrapper img{
+        float: left;
+    }
+}
+
+.about .wrapper .text{
+    text-align: center;
+    font-size: 19px;
+}
+
+.about .wrapper .text p:first-of-type{
+    font-weight: bold;
+}
+
+.about .wrapper .text hr{
+    width: 50%;
+    height: 2px;
+    background-color: var(--main-color-1);
+}
+
+.about .wrapper .text p:last-of-type{
+    
+}
+
+/* Questions and Answers */
+
+.QuestionsAnswers {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    clear: left;
+    max-width: 500px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.QuestionsAnswers .question {
+    background-color: white;
+    padding: 10px;
+}
+
+.QuestionsAnswers .question .question-section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.QuestionsAnswers .question .question-section .icon button{
+    background-color: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.QuestionsAnswers .question .question-section .icon button svg {
+    stroke: red;
+}
+
+/* classes to change plus icon state */
+.QuestionsAnswers .question .question-section .icon .plus.hide-plus {
+    display: none;
+}
+
+.QuestionsAnswers .question .question-section .icon .minus {
+    display: none;
+}
+
+/* classes to change minus icon state */
+.QuestionsAnswers .question .question-section .icon .minus.show-minus {
+    display: block;
+}
+
+.QuestionsAnswers .question .answer-section {
+    display: none;
+}
+.QuestionsAnswers .question .answer-section.show-answer {
+    display: block;
+}
+
+.QuestionsAnswers .question .answer-section p{
+    margin-top: 13px;
+    padding-left: 10px;
+}
+
+.QuestionsAnswers .question .answer-section p > a {
+    color: var(--main-color-1);
+}
+
+

@@ -1,0 +1,215 @@
+.home {
+    /* background-color: var(--main-color-2); */
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100vw;
+    overflow: hidden;
+    background-image: url("../../images/openingImage.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 70;
+    height: calc(100vh - 60px);
+}
+
+.home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000024;
+    z-index: 80;
+}
+
+.home .container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    position: relative;
+    z-index: 90;
+}
+
+@media (max-width: 767.99px) {
+    .home .container {
+        flex-direction: column;
+    }
+}
+
+.home .container  .text {
+    position: relative;
+    max-width: 360px;
+    font-size: 20px;
+    color: white;
+    animation: textUpAnimation 1s ease-in-out 1 forwards;
+}
+
+@keyframes textUpAnimation {
+    0%{
+        top: 150px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+/* 
+.home .container  .text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff21;
+    z-index: -1;
+} */
+
+@media (max-width: 767.99px) {
+    .home .container  .text{
+        text-align: center;
+    }
+}
+
+.home .container  .text .dateLocation{
+
+}
+
+@media (max-width: 767.99px) {
+    .home .container  .text .dateLocation {
+        display: none;
+    }
+}
+
+.home .container  .text .dateLocation .date{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.home .container  .text .dateLocation .date span{
+
+}
+
+.home .container  .text .dateLocation .location{
+    display: flex;
+    align-items: center;
+}
+
+.home .container  .text .dateLocation .location svg,
+.home .container  .text .dateLocation .date svg{
+    margin-right: 6px;
+}
+
+.home .container  .text .dateLocation .location span{
+
+}
+
+.home .container  .text .mainTitle{
+
+}
+
+.home .container  .text .mainTitle span:first-child {
+    font-weight: 400;
+}
+
+.home .container  .text .mainTitle span:last-child {
+    color: black;
+}
+
+.home .container  .text .paragraph {
+
+}
+
+.home .container  .text .buttons{
+
+}
+
+.home .container  .text .buttons .buy,
+.home .container  .text .buttons .explore {
+    border: none;
+    padding: 7px 12px;
+    border-radius: var(--main-border-raduis);
+    font-size: 20px;
+    transition: var(--main-transition);
+}
+
+.home .container  .text .buttons .buy{
+    margin-right: 12px;
+    background-color: rgb(252, 167, 0);
+}
+
+.home .container  .text .buttons .buy:hover {
+    background-color: rgba(252, 168, 0, 0.386);
+}
+
+@media (max-width:321.99px){
+    .home .container  .text .buttons .buy {
+        margin-bottom: 10px;
+    }
+}
+
+.home .container  .text .buttons .explore {
+    background-color: #e6e6e6a8;
+    display: inline-flex;
+}
+
+.home .container  .text .buttons .explore:hover {
+    background-color: #e6e6e6;
+}
+
+.home .container  .text .buttons .explore span{
+
+}
+
+.home .container  .text .buttons .explore svg{
+    width: 15px;
+    transition: var(--main-transition);
+}
+
+.home .container  .text .buttons .explore:hover svg {
+    transform: translateX(4px);
+}
+
+/* .home .container .openingVideo {
+    width: 50%;
+    overflow: hidden;
+    border-radius: var(--main-border-raduis);
+}
+
+.home .container .openingVideo video {
+    max-width: 100%;
+}
+
+@media (max-width: 767.99px) {
+    .home .container .openingVideo {
+        display: none;
+    }
+} */
+/* 
+.home .container .image{
+    position: relative;
+}
+
+.home .container .image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color-3);
+    transform: skewY(-6deg);
+    transform-origin: left center;
+}
+
+@media (max-width: 767.99px) {
+    .home .container .image {
+        display: none;
+    }
+}
+
+.home .container .image img{
+    width: 400px;
+    position: relative;
+}  */
